@@ -50,6 +50,17 @@ window.addEventListener('mousemove', function(event) {
   mouse.y = event.y;
 })
 
+window.addEventListener('click', function(event) {
+  colourScheme = (colourScheme + 1 + colourArray.length) % colourArray.length;;
+  var currentQuantity = circleArray.length;
+  circleArray = [];
+  init(currentQuantity);
+})
+
+window.addEventListener('wheel', function(event) {
+  init(100);
+});
+
 window.addEventListener('resize', function() {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
@@ -152,74 +163,5 @@ function animate() {
 
 init(100);
 animate();
-
-
-
-
-
-
-//RECTANGLES
-//c.fillRect(x,y,width,height);     draws and fills the rectangle with colour
-//c.strokeRect(x,y,width,height);   outlines and draws the rectangle with colour
-
-// c.fillStyle = "rgba(255, 0, 0, 0.5)";
-// c.fillRect(100, 100, 100, 100);
-// c.fillStyle = "rgba(0, 255, 0, 0.5)";
-// c.fillRect(400, 400, 100, 100);
-// c.fillStyle = "rgba(0, 0, 255, 0.5)";
-// c.fillRect(400, 100, 100, 100);
-//
-// c.strokeStyle = "rgba(100, 0, 100, 0.5)";
-// c.strokeRect(200, 300, 100, 100);
-// c.fillStyle = "rgba(100, 100, 0, 0.3)";
-// c.fillRect(200, 300, 100, 100);
-
-
-
-//LINES
-// c.beginPath();   starts a new set of coords for a shape command
-// c.moveTo(x,y);   coordinates of starting point
-// c.lineTo(x,y);   coordinates of next end point
-// c.stroke();      draw command
-
-// c.beginPath();
-// c.moveTo(100, 300);
-// c.lineTo(300, 100);
-// c.lineTo(400, 300);
-// c.lineTo(100, 300);
-// c.strokeStyle = "#fa34a1";
-// c.stroke();
-
-
-
-// ARC/Circle
-//c.arc( x(int), y(int), r(int), startAngle(float), endAngle(float), drawCounterClockwise(boolean) );   creates an outline for our arc/circle
-
-// c.beginPath();
-// c.arc(100, 400, 30, 0, Math.PI * 2, false);
-// c.strokeStyle = "lightBlue";
-// c.stroke();
-//
-// c.beginPath();
-// c.arc(250, 500, 50, 0, Math.PI * 2, false);
-// c.strokeStyle = "darkBlue";
-// c.stroke();
-
-
-//will create multiple colorful circles at random all over the canvas element
-
-// for (var i = 0; i < 2000; i++) {
-//   var x = Math.random() * window.innerWidth;
-//   var y = Math.random() * window.innerHeight;
-//   var colour = "rgba(" + Math.random() * 255 + "," + Math.random() * 255 + "," + Math.random() * 255 + "," + Math.random() + ")"
-//   c.beginPath();
-//   c.arc(x, y, 30, 0, Math.PI * 2, false);
-//   c.strokeStyle = colour;
-//   c.stroke();
-// }
-
-
-
-
 
 console.log(canvas);
