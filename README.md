@@ -5,6 +5,6 @@ Note: Keep the project file structure
 
 You can preview this project [here](https://fipie.github.io/canvasFloatingCircles/)
 
-![screenShot](/images/01.png =100x)
-![screenShot](/images/02.png =100x)
-![screenShot](/images/03.png =100x)
+![](/images/01.png =100x100)
+![](/images/02.png =100x100)
+![](/images/03.png =100x100)
