@@ -8,3 +8,5 @@ You can preview this project [here](https://fipie.github.io/canvasFloatingCircle
 ![](/images/01.png {:height="100px" width="100px"})
 ![](/images/02.png {:height="100px" width="100px"})
 ![](/images/03.png {:height="100px" width="100px"})
+<img src="./images/03.png" width="200" height="200">
+<img src="/images/03.png" width="200" height="200">
